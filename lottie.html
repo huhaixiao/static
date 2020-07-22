@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container-16-9 {
+      width: 1600px;
+      height: 900px;
+    }
+
+    .container-4-3{
+      width: 1600px;
+      height: 1200px;
+    }
+
+    .container {
+      background-color: aquamarine;
+
+      transform: scale(0.5);
+      transform-origin: top left;
+
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container container-16-9"></div>
+  <div class="container container-4-3"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.0/lottie.min.js"></script>
+  <script>
+    window.l1 = window.lottie.loadAnimation({
+      container: document.querySelector('.container-16-9'),
+      path: '/lotties/egg.json'
+    })
+    window.l2 = window.lottie.loadAnimation({
+      container: document.querySelector('.container-4-3'),
+      path: '/lotties/emojis.json'
+    })
+  </script>
+</body>
+
+</html>
